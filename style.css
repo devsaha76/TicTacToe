@@ -4,15 +4,38 @@
 }
 
 body {
-    background: #d8d0d0;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
-    height: 80vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    position: relative;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 5rem;
+    margin-bottom: 0px;
+    color: #fff;
+    padding: 0.1rem 0.8rem;
 }
 
 .game {
@@ -23,49 +46,66 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2vmin;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .box {
     height: 18vmin;
     width: 18vmin;
-    border-radius: 1rem;
+    border-radius: 15px;
     border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     font-size: 10vmin;
-    color: aqua;
-    background-color: burlywood;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
-#reset-btn {
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: black;
+#reset-btn, #new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-top: 30px;
     color: aliceblue;
-    border-radius: 1rem;
+    border-radius: 12px;
     border: none;
-}
-
-#new-btn {
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: black;
-    color: aliceblue;
-    border-radius: 1rem;
-    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
 }
 
 #msg {
-    color: #000000;
+    color: #fff;
     font-size: 5vmin;
+    font-weight: bold;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
 }
 
 .msg-container {
-    height: 100vmin;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 4rem;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
 }
 
 .hide {
