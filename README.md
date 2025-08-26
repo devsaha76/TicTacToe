@@ -15,7 +15,7 @@ A **simple HTML-based Tic Tac Toe Game** that supports two player mode for now. 
 
 ## Play It Online
 
-[Click here to play]()
+[Click here to play](https://tic-tac-toe-nine-orcin-29.vercel.app/)
 
 ---
 
@@ -30,7 +30,7 @@ A **simple HTML-based Tic Tac Toe Game** that supports two player mode for now. 
 ---
 
 ## Demo Video
-![Demo Video](demo.mp4)
+![Demo Video](demo.gif)
 
 ---
 
